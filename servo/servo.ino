@@ -11,13 +11,14 @@ void setup() {
 }
 
 void loop() {
-  for (pos = 0; pos <= 180; pos += 1) { 
-    // in steps of 1 degree
-    myservo.write(pos);             
-    delay(15);                     
-  }
-  for (pos = 180; pos >= 0; pos -= 1) { 
-    myservo.write(pos);             
-    delay(15);                     
+  if (digitalRead(button_1) == LOW) {
+    Serial.println("Button Pressed!");
+    for (pos = 0; pos <11; pos += 1){
+      myservo.write(pos);
+      delay(15);
+      
+    }
+  Serial.println("forward");                    
   }
 }
+
