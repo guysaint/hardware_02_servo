@@ -23,7 +23,7 @@ void loop() {
       myservo.write(180);
       delay(500);
     }
-
+    Serial.println("forward!")
     
 
     
