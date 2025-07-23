@@ -17,19 +17,16 @@ void loop() {
   if (currentButtonState && !buttonPreviouslyPressed) {
     Serial.println("Button Pressed!");
 
-    // 0 → 180도 회전
-    for (pos = 0; pos <= 270; pos += 30) {
-      myservo.write(pos);
-      delay(20);
+    for(int i = 0; i<=10; i++){
+      myservo.write(0);
+      delay(500);
+      myservo.write(180);
+      delay(500);
     }
 
-    // 180 → 0도 회전
-    for (pos = 270; pos >= 0; pos -= 30) {
-      myservo.write(pos);
-      delay(20);
-    }
+    
 
-    Serial.println("Return complete");
+    
   }
 
   buttonPreviouslyPressed = currentButtonState;
