@@ -2,10 +2,12 @@
 
 Servo myservo;  
 int pos = 0;    
+int button_1 = 8;
 
 void setup() {
-  myservo.attach(9);  
-  
+  myservo.attach(9);
+  pinMode(button_1, INPUT_PULLUP);  
+  Serial.begin(9600);
 }
 
 void loop() {
