@@ -1,7 +1,7 @@
 import turtle
 import serial
 import time
-
+#test
 #터틀 초기 설정
 s = turtle.getscreen()
 #거북이 변수에 지정, 거북이 초기 설정
